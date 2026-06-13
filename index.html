@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Death Parasite™ | Classified Archive</title>
+  <meta name="description" content="Death Parasite is an AAA psychological survival horror experience disguised as a classified investigation archive." />
+  <link rel="icon" href="project.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" id="siteLoader">
+    <div class="loader-top">ACCESSING ARCHIVE...</div>
+    <div class="loader-status" id="loaderStatus">VERIFYING CREDENTIALS...</div>
+    <div class="loader-bar">
+      <span class="loader-progress" id="loaderProgress"></span>
+    </div>
+    <div class="loader-steps">
+      <span>SCANNING DATABASE...</span>
+      <span>CHECKING INCIDENT REPORTS...</span>
+      <span>AUTHORIZATION CONFIRMED</span>
+      <span>ACCESS LEVEL 01 GRANTED</span>
+    </div>
+  </div>
+
+  <div id="cursorRing"></div>
+  <div id="cursorDot"></div>
+
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand-column">
+        <img class="brand-logo" src="project-logo.png" alt="Death Parasite logo" />
+        <div>
+          <span class="brand-label">DEATH PARASITE™</span>
+          <span class="access-badge">ACCESS LEVEL 01</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#access">Database</a>
+        <a href="#chapter01">Chapter 01</a>
+        <a href="#infection">Infection</a>
+        <a href="#missing">Missing</a>
+        <a href="#creature">Creature</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+      </nav>
+
+    </header>
+
+    <main>
+      <section class="hero-section" id="hero">
+        <div class="hero-backdrop">
+          <img src="project-background.jpg" alt="Abandoned college corridor" class="hero-image" />
+          <div class="hero-overlay"></div>
+          <div class="hero-scanline"></div>
+          <div class="hero-glow"></div>
+          <div class="hero-fog"></div>
+        </div>
+        <div class="hero-panel">
+          <p class="eyebrow">SANCTIONED • CLASSIFIED • ARCHIVE ENTRY</p>
+          <h1>DEATH PARASITE</h1>
+          <p class="hero-copy">Some infections are not biological.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="enterDatabase">Enter Database</button>
+            <button class="btn btn-secondary" id="watchTrailer">Watch Trailer</button>
+            <button class="btn btn-ghost" id="beginInvestigation">Begin Investigation</button>
+          </div>
+          <div class="hero-status">UNLOCKED RECORDS: 24 / 72 • HIDDEN FILES AVAILABLE</div>
+          <div class="hero-footnote">Repeated clicks reveal hidden classified evidence.</div>
+        </div>
+      </section>
+
+      <section class="section access-section" id="access">
+        <div class="section-header">
+          <span>ACCESS PANEL</span>
+          <h2>Classified Database</h2>
+        </div>
+        <div class="access-grid reveal-on-scroll">
+          <article class="access-card">
+            <span>Incident Reports</span>
+            <p>High-priority logs collected from the initial campus breach.</p>
+          </article>
+          <article class="access-card">
+            <span>Infection Cases</span>
+            <p>Active monitoring records, affected subjects, and risk metrics.</p>
+          </article>
+          <article class="access-card locked">
+            <span>Research Logs</span>
+            <p>Encrypted records reserved for Level 02 clearance.</p>
+            <span class="access-tag">LOCKED</span>
+          </article>
+          <article class="access-card">
+            <span>Missing Persons</span>
+            <p>Underground reports of students, faculty, and unknown subjects.</p>
+          </article>
+          <article class="access-card locked">
+            <span>Campus Records</span>
+            <p>Trajectories, facility access, and surveillance metadata.</p>
+            <span class="access-tag">CLASSIFIED</span>
+          </article>
+          <article class="access-card locked">
+            <span>Classified Evidence</span>
+            <p>Corrupted files, encrypted footage, and sealed audio logs.</p>
+            <span class="access-tag">RESTRICTED</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section chapter-section" id="chapter01">
+        <div class="section-header">
+          <span>CHAPTER 01</span>
+          <h2>The Campus Incident</h2>
+        </div>
+        <p class="section-intro">Classified survey of the first containment event. These records are designed to raise questions, not answer them.</p>
+        <div class="chapter-grid reveal-on-scroll">
+          <article class="chapter-card scan-target">
+            <h3>Dormitory</h3>
+            <p>Hallways filled with stale air, shuttered windows, and abandoned personal effects.</p>
+            <span class="status-dot critical"></span>
+          </article>
+          <article class="chapter-card scan-target">
+            <h3>Library</h3>
+            <p>Bookshelves cast long shadows while corrupted annotations appear on archived records.</p>
+            <span class="status-dot observed"></span>
+          </article>
+          <article class="chapter-card scan-target">
+            <h3>Lecture Hall</h3>
+            <p>Empty seats and a lecture board filled with half-scratched formulas and warnings.</p>
+            <span class="status-dot infected"></span>
+          </article>
+          <article class="chapter-card scan-target">
+            <h3>Underground Facilities</h3>
+            <p>Maintenance ducts, access tunnels, and a sealed node that holds the incident’s origin point.</p>
+            <span class="status-dot unknown"></span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section infection-section" id="infection">
+        <div class="section-header">
+          <span>INFECTION DATABASE</span>
+          <h2>Threat Monitor</h2>
+        </div>
+        <div class="risk-grid reveal-on-scroll">
+          <article class="risk-card safe">
+            <h3>SAFE</h3>
+            <p>Scoped zones with no active contamination signatures.</p>
+          </article>
+          <article class="risk-card observed">
+            <h3>OBSERVED</h3>
+            <p>Unusual patterns detected in student behavior. Subject under surveillance.</p>
+          </article>
+          <article class="risk-card infected">
+            <h3>INFECTED</h3>
+            <p>Confirmed corruption of perception and biological markers.</p>
+          </article>
+          <article class="risk-card critical">
+            <h3>CRITICAL</h3>
+            <p>Facility lockdown in effect. Contact with this node is forbidden.</p>
+          </article>
+          <article class="risk-card unknown">
+            <h3>UNKNOWN</h3>
+            <p>Data stream broken. The source remains unresolved.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section missing-section" id="missing">
+        <div class="section-header">
+          <span>MISSING PERSONS</span>
+          <h2>Investigation Board</h2>
+        </div>
+        <div class="missing-grid reveal-on-scroll">
+          <article class="missing-card corrupted">
+            <div class="photo-placeholder"></div>
+            <h3>Subject 11</h3>
+            <p>Student. Last seen near the east dorm entrance.</p>
+            <span>STATUS: CLASSIFIED</span>
+          </article>
+          <article class="missing-card corrupted">
+            <div class="photo-placeholder"></div>
+            <h3>Dr. Ramsey</h3>
+            <p>Faculty. Disappeared during the second lockdown sweep.</p>
+            <span>STATUS: CLASSIFIED</span>
+          </article>
+          <article class="missing-card corrupted">
+            <div class="photo-placeholder"></div>
+            <h3>Unknown Subject</h3>
+            <p>Recovered on surveillance tape, identity redacted.</p>
+            <span>STATUS: UNKNOWN</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section creature-section" id="creature">
+        <div class="section-header">
+          <span>CREATURE DATABASE</span>
+          <h2>Research Dossier</h2>
+        </div>
+        <div class="creature-grid reveal-on-scroll">
+          <article class="creature-card">
+            <h3>Silhouette Scan</h3>
+            <p>Distorted outline recovered from the breach site. Full form remains unknown.</p>
+          </article>
+          <article class="creature-card">
+            <h3>Redacted Report</h3>
+            <p>Evidence tags and biological analysis have been partially wiped by system interference.</p>
+          </article>
+          <article class="creature-card locked">
+            <h3>Sensor Feed</h3>
+            <p>Live recordings are sealed. Access requires deeper clearance.</p>
+            <span class="access-tag">LOCKED</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section timeline-section" id="timeline">
+        <div class="section-header">
+          <span>INVESTIGATION TIMELINE</span>
+          <h2>Incident Overview</h2>
+        </div>
+        <div class="timeline-wrap reveal-on-scroll">
+          <div class="timeline-point active" data-detail="Campus lockdown initiated after the first unclassified report."></div>
+          <div class="timeline-point" data-detail="The research team reported corrupted audio and lost telemetry."></div>
+          <div class="timeline-point" data-detail="Security footage captured a figure moving through maintenance tunnels."></div>
+          <div class="timeline-point" data-detail="Communications failed. Investigation teams withdrew to safe perimeter."></div>
+        </div>
+        <div class="timeline-detail" id="timelineDetail">Campus lockdown initiated after the first unclassified report.</div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="section-header">
+          <span>MEDIA GALLERY</span>
+          <h2>Archive Preview</h2>
+        </div>
+        <div class="gallery-grid reveal-on-scroll">
+          <article class="gallery-card" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'%3E%3Crect width='1200' height='800' fill='%23110b0b'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23e03d3d' font-family='Inter' font-size='40'%3EScreenshot 01%3C/text%3E%3C/svg%3E">
+            <span>Screenshot</span>
+          </article>
+          <article class="gallery-card" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'%3E%3Crect width='1200' height='800' fill='%230b0d11'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23ff2f2f' font-family='Inter' font-size='40'%3EEnvironment 02%3C/text%3E%3C/svg%3E">
+            <span>Environment Art</span>
+          </article>
+          <article class="gallery-card" data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'%3E%3Crect width='1200' height='800' fill='%230f0c10'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23d51212' font-family='Inter' font-size='40'%3EConcept Preview%3C/text%3E%3C/svg%3E">
+            <span>Concept Art</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-header">
+          <span>STUDIO INFORMATION</span>
+          <h2>About Nextgen</h2>
+        </div>
+        <div class="about-container reveal-on-scroll">
+          <div class="about-content">
+            <div class="about-card featured">
+              <div class="about-icon">◆</div>
+              <h3>Nextgen Studio</h3>
+              <p>A forward-thinking independent game studio founded to create immersive, boundary-pushing experiences that challenge perception and blur the line between reality and fiction.</p>
+              <ul class="about-list">
+                <li>AAA-Quality Indie Development</li>
+                <li>Psychological & Horror Specialization</li>
+                <li>Multi-Platform Distribution</li>
+                <li>Innovative Storytelling</li>
+              </ul>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">▰</div>
+              <h3>Death Parasite</h3>
+              <p>Our flagship project—a psychological survival horror experience that disguises itself as a classified investigation archive. An ambitious narrative that redefines interactive storytelling.</p>
+              <ul class="about-list">
+                <li>Flagship AAA Title</li>
+                <li>Immersive Narrative Experience</li>
+                <li>Global Release 2026</li>
+                <li>Multi-Platform Available</li>
+              </ul>
+            </div>
+          </div>
+          <div class="about-stats reveal-on-scroll">
+            <div class="stat">
+              <span class="stat-number">24</span>
+              <span class="stat-label">Unlocked Records</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">72</span>
+              <span class="stat-label">Total Archives</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Active Sectors</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Mysteries Remain</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section team-section" id="team">
+        <div class="section-header">
+          <span>DEVELOPMENT TEAM</span>
+          <h2>Nextgen Investigators</h2>
+        </div>
+        <p class="section-intro">The minds behind the investigation. Meet the team that discovered the Death Parasite.</p>
+        <div class="team-grid reveal-on-scroll">
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="anshsharma.ico" alt="Ansh Sharma" />
+            </div>
+            <h3>Ansh Sharma</h3>
+            <p class="team-role">Founder & Lead Investigator</p>
+            <p class="team-bio">Principal architect of the classified archive system.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="shivapal.ico" alt="Shiva Pal" />
+            </div>
+            <h3>Shiva Pal</h3>
+            <p class="team-role">Co-Founder & Research Lead</p>
+            <p class="team-bio">Expert in biological anomalies and infection vectors.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section secret-section hidden" id="secretArchive">
+        <div class="section-header">
+          <span>SECRET FILES</span>
+          <h2>Encrypted Evidence</h2>
+        </div>
+        <div class="secret-grid reveal-on-scroll">
+          <article class="secret-card">
+            <h3>Research Recording</h3>
+            <p>Audio log sealed behind encryption. Only partial waveform data is available.</p>
+          </article>
+          <article class="secret-card">
+            <h3>Corrupted Document</h3>
+            <p>File fragments indicate a security breach in the archive’s own system.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">Nextgen</div>
+      <div class="footer-links">
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon youtube" title="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon instagram" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      <div class="footer-copy">Death Parasite™ © 2026 Nextgen. All Rights Reserved.</div>
+    </footer>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose">×</button>
+      <img src="" alt="Preview" id="lightboxImage" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <div class="video-modal" id="videoModal">
+    <div class="video-backdrop"></div>
+    <div class="video-content">
+      <button class="lightbox-close" id="videoClose">×</button>
+      <video id="trailerVideo" src="project-trailer.mp4" controls preload="metadata"></video>
+      <p>PROJECT TRAILER • DEATH PARASITE</p>
+    </div>
+  </div>
+
+  <div class="terminal-panel" id="terminalPanel">
+    <div class="terminal-header">
+      <div class="terminal-title">CLASSIFIED COMMAND INTERFACE</div>
+      <button id="terminalClose" class="control-btn small">CLOSE</button>
+    </div>
+    <pre class="terminal-output" id="terminalOutput"></pre>
+    <div class="terminal-input-row">
+      <span>></span><input type="text" id="terminalInput" placeholder="Type HELP for commands" autocomplete="off" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
